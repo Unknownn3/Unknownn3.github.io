@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+    <style>
+        .gradient-text {
+            background: linear-gradient(45deg, #6366f1, #8b5cf6, #d946ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+        }
+
+        .skill-bar {
+            transition: width 1s ease-in-out;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a class="text-2xl font-bold gradient-text" href="#">About Me</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-purple-600 transition">Tentang</a>
+                    <a href="#skills" class="text-gray-600 hover:text-purple-600 transition">Keahlian</a>
+                    <a href="#projects" class="text-gray-600 hover:text-purple-600 transition">Proyek</a>
+                    <a href="#contact" class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center text-white" id="home">
+        <div class="container mx-auto px-6 text-center">
+            <img src="./images/dieng3.jpg" alt="" class="w-32 h-32 rounded-full mx-auto mb-8 border-4 border-white shadow-xl floating animate_animated animate_fadeIn">
+            <h1 class="text-5xl font-bold mb-4 animate_animated animate_fadeInUp">Muhammad Rizky Herawan</h1>
+            <div class="text-2xl mb-8">
+                <span id="typed"></span>
+            </div>
+            <div class="flex justify-center space-x-4 animate_animated animatefadeInUp animate_delay-1s">
+                <a href="#contact" class="bg-white text-purple-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition">
+                    Hubungi Saya
+                </a>
+                <a href="#projects" class="border-2 border-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-purple-600 transition">
+                    Lihat Proyek
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20" id="about">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Tentang Saya</h2>
+            <div class="flex flex-wrap items-center">
+                <div class="w-full md:w-1/2 mb-12 md:mb-0">
+                    <img src="./images/futsal.JPG" alt="About" class="rounded-lg shadow-xl card-hover">
+                </div>
+                <div class="w-full md:w-1/2 md:pl-12">
+                    <p class="text-gray-600 mb-6">
+                        Saya adalah seorang mahasiswa aktif fakultas sains & teknologi bidang study S1 Informatika Universitas Teknologi Yogyakarta.
+                        Di sini saya mulai belajar dan menguasai satu persatu bahasa pemrograman pada semester awal. 
+                        Python adalah bahasa pemrograman yang saya kuasai saat ini
+                        Dengan pengalaman lebih dari 5 bulan, saya telah mengerjakan berbagai proyek 
+                        yang menantang dan inovatif.
+
+                        Sebelum saya masuk ke dunia perkuliahan, saya mengambil jalan untuk pergi khursus berbahasa inggris di Basic English Course(BEC) MR. Khalend Osen, Pare, Kediri pada taun 2023 selama 6 bulan lamanya.
+                        Disana saya belajar banyak tentang Grammar, Speaking, Pronouncation sampai dengan "How to talk with the foreigners in Borobudur Temple".
+
+                        Dan ketika di kediri saya sering di ajak bermain futsal oleh teman teman baru di sana. Disitulah saya mulai mengenal futsal dan terus bermain sampai saat ini
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-white p-4 rounded-lg shadow text-center card-hover">
+                            <i class="fas fa-award text-3xl text-purple-600 mb-2"></i>
+                            <h4 class="font-bold">Pengalaman</h4>
+                            <p>5+ Bulan</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow text-center card-hover">
+                            <i class="fas fa-project-diagram text-3xl text-purple-600 mb-2"></i>
+                            <h4 class="font-bold">Proyek</h4>
+                            <p>3+ Selesai</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-purple-600 hover:text-purple-700">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-purple-600 hover:text-purple-700">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-purple-600 hover:text-purple-700">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-20 bg-gray-100" id="skills">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Technical Skills -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-8">Hard Skills</h3>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow card-hover">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold">Futsal Goalkeeper</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow card-hover">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold">Basic Grammar, Basic Speaking, Basic Pronouncation, and Web Development</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Soft Skills -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-8">Soft Skills</h3>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow card-hover">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold">Communication</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full skill-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow card-hover">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold">Teamwork</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full skill-bar" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-20" id="projects">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Projects Terbaru</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="./images/gamemmorpg.png" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Aplikasi Game MMORPG (Gun Gale ONline)</h3>
+                        <p class="text-gray-600 mb-4">Ini adalah project pertama saya ketika masuk dan belajar di Universitas mata kuliah Algoritma Pemrograman Dasar. Project ini berisi kode python tentang perulangan atau LOOPING dengan menggunakan tema GAME MMORPG berbasis CLI/Command.</p>
+                        <a href="#" class="text-purple-600 hover:text-purple-700 font-bold">Lihat Detail →</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="./images/brandbiru.png" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Aplikasi Marketplace Online Brand Biru</h3>
+                        <p class="text-gray-600 mb-4">Ini adalah project kedua saya pada mata kuliah Algoritma Pemrograman Dasar. Ini adalah tugas besar/akhir dimana mahasiswa di bagi menjadi beberapa kelompok untuk membuat satu buat aplikasi yang nantinya di demo kan/ di uji kan. pada tugas ini aku belajar banyak tentang pentingnya komunikasi antar team dan juga pentingnya pengaruh teamwork atas keberhasilan dan kesuksesan project.</p>
+                        <a href="#" class="text-purple-600 hover:text-purple-700 font-bold">Lihat Detail →</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="./images/piala2.jpg" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Indonesia Statistic Festival 2024</h3>
+                        <p class="text-gray-600 mb-4">Ini adalah project ketiga saya. Ini adalah sebuah kompetisi tingkat Nasional di bidang seni dan olahraga yang di selenggarakan oleh Universitas Islam Indonesia(UII) dimana kami dari tim futsal ROTEKTICA bersama dengan tim futsal Informatika22 berhasil menjuarai JUARA 1 dan JUARA 2, serta mendapatkan JUARA UMUM pada kompetisi ini.</p>
+                        <a href="#" class="text-purple-600 hover:text-purple-700 font-bold">Lihat Detail →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-gray-100" id="contact">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Hubungi Saya</h2>
+            <div class="max-w-lg mx-auto">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <form>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-bold mb-2" for="name">
+                                Nama
+                            </label>
+                            <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-purple-500" 
+                                   type="text" id="name" placeholder="Nama Anda">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-bold mb-2" for="email">
+                                Email
+                            </label>
+                            <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-purple-500" 
+                                   type="email" id="email" placeholder="email@example.com">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-bold mb-2" for="message">
+                                Pesan
+                            </label>
+                            <textarea class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-purple-500" 
+                                      id="message" rows="4" placeholder="Tulis pesan Anda"></textarea>
+                        </div>
+                        <button class="w-full bg-purple-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-purple-700 transition">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 Muhammad Rizky Herawan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Typed.js initialization
+        document.addEventListener('DOMContentLoaded', function(){
+            var typed = new Typed('#typed', {
+                strings: ['Futsal Goalkeeper', 'Basic Grammar', 'Basic Speaking', 'Basic Pronouncation', 'Web Development'],
+                typeSpeed: 50,
+                backSpeed: 50,
+                loop: true
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Initialize skill bars animation
+            const skillBars = document.querySelectorAll('.skill-bar');
+            const observerOptions = {
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.width = entry.target.style.width;
+                    }
+                });
+            }, observerOptions);
+
+            skillBars.forEach(bar => {
+                observer.observe(bar);
+            });
+        });
+    </script>
+</body>
+</html>
